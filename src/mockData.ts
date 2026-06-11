@@ -1,0 +1,42 @@
+import { Order } from './types';
+
+export const MOCK_ORDERS: Order[] = [
+  {
+    id: '1',
+    orderNumber: 'FH_202606111305024747172',
+    customerName: '高婷',
+    customerPhone: '18162717645',
+    address: '浙江省温州市乐清市瑞璟嘉园b20栋1302',
+    productName: 'Emporio Armani男士短袖T恤',
+    productImage: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=400&q=80',
+    sku: 'EM004592AF13747UC001',
+    price: 680,
+    quantity: 1,
+    status: 'SHIPPED',
+    createTime: '06-10 17:26',
+    shippingTime: '06-10 17:37',
+    vendorName: 'UNIBUY',
+    vendorId: '1567',
+    agentName: 'UNIBUY城市奥莱',
+    agentId: '15264',
+  },
+  {
+    id: '2',
+    orderNumber: 'FH_202606102004591234567',
+    customerName: '李华',
+    customerPhone: '13888888888',
+    address: '北京朝阳区某某街道',
+    productName: 'Emporio Armani女士徽标单肩包',
+    productImage: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&q=80',
+    sku: 'EW000382AF12103MC032',
+    price: 1280,
+    quantity: 1,
+    status: 'SHIPPED',
+    createTime: '06-10 20:04',
+    shippingTime: '06-11 09:00',
+    vendorName: 'UNIBUY',
+    vendorId: '1567',
+    agentName: 'UNIBUY奢侈品城市奥莱',
+    agentId: '14737',
+  }
+];

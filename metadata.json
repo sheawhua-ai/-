@@ -1,0 +1,6 @@
+{
+  "name": "After-Sales Workflow System",
+  "description": "A comprehensive multi-role after-sales management platform connecting sales, customers, and warehouse logistics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
