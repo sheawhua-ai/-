@@ -4,6 +4,7 @@
  */
 
 export type OrderStatus = 
+  | 'UNPAID'
   | 'SHIPPED' 
   | 'AFTER_SALES_INITIATED' 
   | 'RETURNING' 

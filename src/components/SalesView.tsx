@@ -14,7 +14,8 @@ export const SalesView: React.FC<SalesViewProps> = ({ orders, onAction }) => {
   
   const filteredOrders = orders.filter(o => {
     if (activeTab === 'SHIPPED') return o.status === 'SHIPPED';
-    if (activeTab === 'AFTER_SALES') return o.status === 'AFTER_SALES_INITIATED' || o.status === 'RETURNING' || o.status === 'RECEIVED' || o.status === 'COMPLETED';
+    if (activeTab === 'AFTER_SALES') return (o.status === 'AFTER_SALES_INITIATED' || o.status === 'RETURNING' || o.status === 'RECEIVED') && o.status !== 'COMPLETED' && o.status !== 'UNPAID';
+    if (activeTab === 'CLOSED') return o.status === 'COMPLETED' || o.status === 'UNPAID';
     return true;
   });
 
@@ -40,7 +41,8 @@ export const SalesView: React.FC<SalesViewProps> = ({ orders, onAction }) => {
             { id: 'ALL', label: '待确认 10' },
             { id: 'PENDING', label: '待发货 24' },
             { id: 'SHIPPED', label: '已发货 16' },
-            { id: 'AFTER_SALES', label: '售后' }
+            { id: 'AFTER_SALES', label: '售后' },
+            { id: 'CLOSED', label: '已关闭' }
           ].map((tab) => {
             const isActive = activeTab === tab.id;
             return (

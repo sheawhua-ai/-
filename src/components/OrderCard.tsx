@@ -12,6 +12,7 @@ interface OrderCardProps {
 export const OrderCard: React.FC<OrderCardProps> = ({ order, role, onAction }) => {
   const getStatusLabel = (status: OrderStatus) => {
     switch (status) {
+      case 'UNPAID': return '待支付';
       case 'SHIPPED': return '已发货';
       case 'AFTER_SALES_INITIATED': return '待退货';
       case 'RETURNING': return '退货中';
